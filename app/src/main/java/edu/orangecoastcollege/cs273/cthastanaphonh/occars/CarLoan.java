@@ -6,6 +6,7 @@ package edu.orangecoastcollege.cs273.cthastanaphonh.occars;
 
 public class CarLoan {
 
+    // Private variabled used in the app 
     private static final double STATE_TAX = 0.08;
     private double mPrice;
     private double mDownPayment;
@@ -16,7 +17,7 @@ public class CarLoan {
 
 
 
-
+    // Returns the borrowed amount which is the Price subtracted from the downpayment
     public double borrowedAmount()
     {
         return mPrice - mDownPayment;
@@ -36,7 +37,8 @@ public class CarLoan {
     public double interestAmount()
     {
         double interestRate;
-
+        
+        // Creating switch statement cases based on the Term time selected by the user 
         switch (mTerm)
         {
             case 3:
